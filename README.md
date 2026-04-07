@@ -1,19 +1,34 @@
-# Physics Laboratory III -   data analysis with Python 
+# Physics Laboratory III — Data Analysis with Python
 
-This repo encodes several jupyter notebooks aimed at familiarizing Physics students to python and all the functionalities related to analysis of modern physics data. The content of the notebooks are presented in the  Laboratory III  classes of the 2nd term at University of Catania.
+This repository contains Jupyter notebooks for the Physics Laboratory III course (2nd term, University of Catania). The notebooks introduce Python tools for modern physics data analysis.
 
-## Using Google Co-Lab
-Load the notebook of each class here: https://colab.research.google.com/
+## Notebooks
 
-## Running locally
-Firstly make sure you've an updated version of conda.
-`conda update python; conda update conda`
+| Notebook | Topic |
+|----------|-------|
+| `lesson_0.ipynb` | NumPy arrays, linear algebra, symbolic math (SymPy), integration, root finding, curve fitting |
+| `lesson_1.ipynb` | File I/O (CSV, MCA), reading spectra, fitting a double Gaussian to Cobalt-60 peaks |
+| `lesson_2.ipynb` | Random distributions (uniform, normal, Poisson), rejection sampling, inverse transform sampling |
 
-then make a new conda environment :
-`conda create -n astrolab`
+## Shared Utilities
 
- and install the following  `python packages`:
+`lab3_utils.py` — common functions (`chi_squared`, `red_chi_squared`, `gaussian`, `double_gaussian`, `powerlaw`) imported by all notebooks.
 
- - `conda install numpy scipy matplotlib jupyter  sympy`
- - jupyterlab `conda install -c conda-forge jupyterlab`
- - wget `pip install wget`
+## Using Google Colab
+Load any notebook here: https://colab.research.google.com/
+
+## Running Locally
+
+Make sure you have an up-to-date conda installation:
+```bash
+conda update python && conda update conda
+```
+
+Create a new environment and install the required packages:
+```bash
+conda create -n astrolab
+conda activate astrolab
+conda install numpy scipy matplotlib jupyter sympy
+conda install -c conda-forge jupyterlab
+pip install wget
+```
